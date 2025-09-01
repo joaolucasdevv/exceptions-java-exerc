@@ -37,7 +37,7 @@ public class Reservation {
         return checkOut.getDayOfYear() - getCheckIn().getDayOfYear();
     }
 
-    public LocalDate updateDates(LocalDate checkIn, LocalDate checkOut) {
+    public void updateDates(LocalDate checkIn, LocalDate checkOut) {
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
