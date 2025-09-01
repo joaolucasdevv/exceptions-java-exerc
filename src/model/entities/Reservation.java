@@ -33,4 +33,8 @@ public class Reservation {
         this.roomNumber = roomNumber;
     }
 
+    public Integer duration() {
+        return checkOut.getDayOfYear() - getCheckIn().getDayOfYear();
+    }
+
 }
