@@ -33,12 +33,4 @@ public class Reservation {
         this.roomNumber = roomNumber;
     }
 
-    public void setCheckIn(LocalDate checkIn) {
-        this.checkIn = checkIn;
-    }
-
-    public void setCheckOut(LocalDate checkOut) {
-        this.checkOut = checkOut;
-    }
-
 }
