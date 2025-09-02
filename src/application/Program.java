@@ -34,6 +34,7 @@ public class Program {
             checkOut = LocalDate.parse(sc.nextLine(), Reservation.DTF);
 
             reservation.updateDates(checkIn, checkOut);
+            System.out.println("Reservation: " + reservation);
         }
         else {
             System.out.println("Error in reservation: Check-out date must be after check-in date");
