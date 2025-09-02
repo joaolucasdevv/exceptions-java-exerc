@@ -28,12 +28,12 @@ public class Program {
 
             System.out.println("Enter data to update the reservation:");
             System.out.print("Check-in date (dd/MM/yyyy): ");
-            checkIn = LocalDate.parse(sc.nextLine(), Reservation.DTF);
+            LocalDate newCheckIn = LocalDate.parse(sc.nextLine(), Reservation.DTF);
 
             System.out.print("Check-out date (dd/MM/yyyy): ");
-            checkOut = LocalDate.parse(sc.nextLine(), Reservation.DTF);
+            LocalDate newCheckOut = LocalDate.parse(sc.nextLine(), Reservation.DTF);
 
-            reservation.updateDates(checkIn, checkOut);
+            reservation.updateDates(newCheckIn, newCheckOut);
             System.out.println("Reservation: " + reservation);
         }
         else {
