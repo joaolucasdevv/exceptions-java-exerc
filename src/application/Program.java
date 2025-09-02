@@ -33,7 +33,9 @@ public class Program {
             System.out.print("Check-out date (dd/MM/yyyy): ");
             LocalDate newCheckOut = LocalDate.parse(sc.nextLine(), Reservation.DTF);
 
-            if (!newCheckIn.isAfter(checkIn) && newCheckOut.isAfter(checkOut)) {
+            LocalDate nowDate = LocalDate.now();
+
+            if (!newCheckIn.isAfter(nowDate) && newCheckOut.isAfter(nowDate)) {
                 System.out.println("Error in reservation: Reservation dates for update must be future dates");
             }
             else if (!newCheckOut.isAfter(newCheckIn)) {
