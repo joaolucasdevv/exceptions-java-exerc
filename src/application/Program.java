@@ -25,6 +25,15 @@ public class Program {
         if (checkOut.isAfter(checkIn)) {
             Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
             System.out.println("Reservation: " + reservation);
+
+            System.out.println("Enter data to update the reservation:");
+            System.out.print("Check-in date (dd/MM/yyyy): ");
+            checkIn = LocalDate.parse(sc.nextLine(), Reservation.DTF);
+
+            System.out.print("Check-out date (dd/MM/yyyy): ");
+            checkOut = LocalDate.parse(sc.nextLine(), Reservation.DTF);
+
+            reservation.updateDates(checkIn, checkOut);
         }
         else {
             System.out.println("Error in reservation: Check-out date must be after check-in date");
