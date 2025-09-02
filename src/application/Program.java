@@ -15,6 +15,7 @@ public class Program {
         System.out.print("Room number: ");
         int roomNumber = sc.nextInt();
 
+        sc.nextLine();
         System.out.print("Check-in date (dd/MM/yyyy): ");
         LocalDate checkIn = LocalDate.parse(sc.nextLine(), Reservation.DTF);
 
