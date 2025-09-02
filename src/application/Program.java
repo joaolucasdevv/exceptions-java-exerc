@@ -35,7 +35,7 @@ public class Program {
 
             LocalDate nowDate = LocalDate.now();
 
-            if (!newCheckIn.isAfter(nowDate) && newCheckOut.isAfter(nowDate)) {
+            if (!newCheckIn.isAfter(nowDate) || newCheckOut.isAfter(nowDate)) {
                 System.out.println("Error in reservation: Reservation dates for update must be future dates");
             }
             else if (!newCheckOut.isAfter(newCheckIn)) {
