@@ -47,7 +47,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Room"
+        return "Room: "
                 + roomNumber
                 + ", check-in: "
                 + checkIn.format(DTF)
